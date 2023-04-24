@@ -79,23 +79,7 @@ class GooglePayButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: style == GooglePayButtonStyle.white
-          ? BoxDecoration(
-              boxShadow: <BoxShadow>[
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.15),
-                  offset: const Offset(0, 1),
-                  blurRadius: 3,
-                ),
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
-                  offset: const Offset(0, 1),
-                  blurRadius: 1,
-                )
-              ],
-            )
-          : null,
+    return SizedBox(
       height: defaultButtonHeight,
       child: RawMaterialButton(
         fillColor: style == GooglePayButtonStyle.black ? Colors.black : Colors.white,
@@ -116,8 +100,8 @@ class GooglePayButton extends StatelessWidget {
         ),
         child: SvgPicture.asset(
           _assetPath(context),
-          package: 'mad_pay_android',
-          semanticsLabel: 'Buy with Google Pay text',
+          package: 'pay_buttons',
+          semanticsLabel: 'Pagar com Google Pay',
           // height: 19,
         ),
       ),

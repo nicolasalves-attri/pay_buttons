@@ -32,7 +32,13 @@ class _MyAppState extends State<MyApp> {
                 print('onPressed!!');
               },
             ),
-            googlePayButton: const GooglePayButton(),
+            googlePayButton: GooglePayButton(
+              style: GooglePayButtonStyle.white,
+              type: GooglePayButtonType.subscribe,
+              onPressed: () {
+                print('onPressed!!');
+              },
+            ),
           ),
         ),
       ),
